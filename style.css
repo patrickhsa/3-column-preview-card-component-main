@@ -1,0 +1,152 @@
+:root {
+    /*Cores primárias*/
+    --laranja-brilhante: #e38826;
+    --ciano-escuro: #006970;
+    --ciano-muito-escuro: #004241;
+
+    /*Cor paragrafo*/
+    --branco: #FFFFFF;
+
+    /*Cor fundo, cabeçalho e botões*/
+    --cinza-muito-claro: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Big Shoulders Display', cursive;
+
+    background-color: var(--cinza-muito-claro); 
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    width: 60%;    
+}
+
+.carros {
+    width: 33.33%;
+    line-height: 1.5em;    
+    padding: 5em;
+}
+
+.sedans {
+    background: var(--laranja-brilhante);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.suv {
+    background: var(--ciano-escuro);
+}
+
+.luxury {
+    background: var(--ciano-muito-escuro);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;    
+    color: var(--cinza-muito-claro);
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--cinza-muito-claro);
+    opacity: 70%;
+}
+
+button {
+    background: var(--cinza-muito-claro);
+    font-size: 16px;
+    padding: 0.8em 2em;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 5em;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--cinza-muito-claro);
+}
+
+.botao__sedans {
+    color: var(--laranja-brilhante);
+}
+
+.botao__sedans:hover {
+    background: var(--laranja-brilhante);
+}
+
+.botao__suv {
+    color: var(--ciano-escuro);
+}
+
+.botao__suv:hover {
+    background: var(--ciano-escuro);
+}
+
+.botao__luxury {
+    color: var(--ciano-muito-escuro);
+}
+
+.botao__luxury:hover {
+    background: var(--ciano-muito-escuro);
+}
+
+.attribution {
+    position: fixed;
+    bottom: 1em;
+    left: 40%;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        height: auto;        
+    }
+
+    .principal {
+        flex-direction: column;
+        margin: 1em 0.5em;
+    }
+
+    .carros {
+        width: 100%;
+        height: 50vh;
+        padding: 1em;
+    }    
+
+    .sedans {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .luxury {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    .attribution {
+        align-items: center;
+        left: 20%;
+        bottom: 0;
+        font-size: 12px;
+    }
+    
+}
